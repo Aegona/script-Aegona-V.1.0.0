@@ -7,7 +7,7 @@ local XX =
         Style = 1,
         SizeX = 400,
         SizeY = 185,
-        Theme = "Light"
+        Theme = "Ben10"
     }
 )
 
@@ -32,7 +32,17 @@ local shop =
         Title = "-- SHOP --"
     }
 )
+local Main =
 
+    XX.New(
+
+    {
+
+        Title = "-->Raid<--"
+
+    }
+
+)
 
 local D =
     Main.Toggle(
@@ -123,4 +133,25 @@ ts:Teleport(game.PlaceId, p)
         )
         
         
+                
+        
+       local blah =
+    raid.Toggle(
+    {
+        Text = "--> Kill Aura <--",
+        Callback = function(Value)
+            _G.Autokillaura = Value
+            while _G.Autokillaura do
+                wait(0.60)
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    if v.ClassName == "Model" then
+        v.Humanoid.Health = die
+    end
+    end
+        Enabled = false
+            end
+    end
+    }
+) 
+
         
